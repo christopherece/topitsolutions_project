@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} | Services {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h1>Services</h1>
+            <h5>Computer and Laptop Upgrade</h5>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div class="container">
+    <section class="row">
+          <div class="col m9 l10 s12">
+            <div class="section scrollspy" id="upgrades">
+              <h5>Computer Upgrades, Software and Data Migration
+              </h5>
+              <p class="light">
+                Slow Computer is frustrating especially when you are doing a project.
+                Chances are your Hard Disk needs replacement or your Memory Stick needs upgrade.
+                Here in TopITSolutions we will upgrade your HDD to SSD without loosing any data.
+              </p>
+            </div>
+          </div>
+
+          <div class="col hide-on-small-only s12 m4 l2">
+            <ul class="pinned section table-of-contents">
+              <li>
+                <a href="#upgrades">Upgrade PC</a>
+              </li>
+    
+              <li>
+                <a href="{% url 'services' %}">Back to Services</a>
+              </li>
+            </ul>
+          </div>
+    </section>
+  </div>
+
+  {% endblock %}

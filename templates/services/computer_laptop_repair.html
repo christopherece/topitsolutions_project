@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} | Services {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h1>Services</h1>
+            <h5>Computer and Laptop Repair, Assembly, Backups and Network</h5>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div class="container">
+    <section class="row">
+          <div class="col m9 l10 s12">
+            <div class="section scrollspy" id="hardware">
+              <h5>Hardware and Software Related Issues</h5>
+              <p class="light">
+                Are you looking for someone skilled in laptop and computer repair 
+                who can come directly to you? Perhaps your computer is crashing, 
+                running very slowly, or not running at all. Our expert technicians 
+              carry out onsite desktop and laptop computer repairs to get you up 
+              and running again.
+              </p>
+              <p class="light">
+                As with all repairs, some things can take time to complete. If necessary, work can be continued off-site and your computer will be returned to you at your convenience.
+              </p>
+            </div>
+            <div class="section scrollspy" id="assembly">
+              <h5>PC Assembly</h5>
+              <p class="light">
+                Are you looking for an affordable PC that suites your needs? Our Team can help you build a
+                PC that suites your workload. Moreover, We will also migrate all your Software, Documents, Images etc,
+              </p>
+            </div>
+
+            <div class="section scrollspy" id="wifi">
+              <h5>Wifi / AP Setup</h5>
+              <p class="light">
+                Are you looking for someone skilled in laptop and computer repair who can come directly to you? Perhaps your computer is crashing, running very slowly, or not running at all. Our expert technicians carry out onsite desktop and laptop computer repairs to get you up and running again.
+                If the problem is serious then our Geeks can get under the hood of your desktop or laptop computer and replace a faulty component or upgrade the part of your computer that might be causing the issue.
+              </p>
+              <p class="light">
+                As with all repairs, some things can take time to complete. If necessary, work can be continued off-site and your computer will be returned to you at your convenience.
+              </p>
+            </div>
+          </div>
+
+          <div class="col hide-on-small-only s12 m4 l2">
+            <ul class="pinned section table-of-contents">
+              <li>
+                <a href="#hardware">Hardware Issues</a>
+              </li>
+              <li>
+                <a href="#assembly">PC Assembly</a>
+              </li>
+              <li>
+                <a href="#wifi">Wifi / Ap Setup</a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}">Back to Services</a>
+              </li>
+            </ul>
+          </div>
+    </section>
+  </div>
+
+  {% endblock %}

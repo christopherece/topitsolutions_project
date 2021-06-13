@@ -27,12 +27,14 @@ SECRET_KEY = 'django-insecure-=6_3!(6)zhdmreg2b8971&64a60q1p(uvsljab-yen9k=kp)*z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.182','localhost','topitsolutions.local']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'services.apps.ServicesConfig',
+    'blogs.apps.BlogsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'topitsolution.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tbl_topit',
+        'USER': 'postgres',
+        'PASSWORD': '011258',
+        'HOST': 'localhost'
     }
 }
 
@@ -130,3 +135,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+## Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

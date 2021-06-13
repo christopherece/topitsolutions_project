@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %} | Services {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h5>Welcome To TopITSolution</h5>
+            <h1>Service Offered</h1>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <section id="popular" class="section section-popular grey lighten-4 scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">computer</i></h2>
+            <h5 class="center">Computer and Laptop Repair</h5>
+
+            <p class="light">
+              Are you looking for someone skilled in laptop and computer repair 
+              who can come directly to you? Perhaps your computer is crashing, 
+              running very slowly, or not running at all. 
+            </p>
+            <p><a href="{% url 'computer_laptop_repair' %}">Read More...</a> </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">phone</i></h2>
+            <h5 class="center">Remote Support</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, 
+              we were able to create a framework that incorporates components and 
+              animations that provide more feedback to users. </p>
+            <p><a href="#">Read More...</a> </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">settings</i></h2>
+            <h5 class="center">Computer Upgrades</h5>
+
+            <p class="light">
+              A slow computer can be incredibly frustrating – whether you’re checking emails, 
+              browsing the internet, or trying to use multiple apps at once, an unresponsive 
+              or sluggish PC can be easily improved through servicing or affordable part upgrades.
+              </p>            
+              <p><a href="{% url 'computer_laptop_upgrade' %}">Read More...</a> </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">signal_wifi_4_bar</i></h2>
+            <h5 class="center">Internet, Wifi, Access Point Setup</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p><a href="#">Read More...</a> </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">web</i></h2>
+            <h5 class="center">Web Development</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p><a href="#">Read More...</a> </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><i class="medium material-icons icon-color-services" style="float: left;margin: 0 10px;">settings_remote
+            </i></h2>
+            <h5 class="center">Internet of Things</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p><a href="#">Read More...</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

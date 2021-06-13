@@ -1,5 +1,160 @@
 {% extends 'base.html' %}
 
+{% block title %} | Welcome {% endblock %}
+
+{% load static %}
+
+
+
 {% block content %}
-    <h1>Hompage</h1>
+
+<!-- Header -->
+<header class="main-header">
+    {% include 'partials/_navbar.html'  %}
+    <!-- Showcase -->
+    <div class="showcase container">
+      <div class="row">
+        <div class="col s12 m10 offset-m1 center">
+          <h1 id="headingText">Your Home IT Specialist</h1>
+          <p></p>
+          <br>
+          <br>
+          <a href="#" class="btn btn-large white purple-text">
+            <i class="large material-icons">phone</i>
+              <span id="phone">022-493-6601</span> 
+          </a>
+          <a href="#" class="btn btn-large purple white-text">
+            <i class="large material-icons">event</i>
+              <span id="phone">Book Online</span> 
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-boxes center">
+    <div class="row">
+      <div class="col s12 m6 l3 blue white-text box">
+        <i class="material-icons medium">computer</i>
+        <h5>PC and Mac Support</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
+          eaque et?</p>
+      </div>
+      <div class="col s12 m6 l3 purple white-text box">
+        <i class="material-icons medium">web</i>
+        <h5>Web Design</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
+          eaque et?</p>
+      </div>
+      <div class="col s12 m6 l3 teal white-text box">
+        <i class="material-icons medium">backup</i>
+        <h5>Internet of Things</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
+          eaque et?</p>
+      </div>
+      <div class="col s12 m6 l3 amber darken-4 white-text box">
+        <i class="material-icons medium">people</i>
+        <h5>Remote Support</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
+          eaque et?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: About -->
+  <section class="section section-about grey lighten-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>
+            <span class="deep-purple-text text-darken-1">About</span> Us</h3>
+          <p class="aboutus">
+            TopITSolutions are onthe go IT Support. We travel to your home or office to fix computer issues.
+            We have the skills and experience to solve any IT related issues including computers, laptops, networks, wifi etc..
+            
+          </p>
+        </div>
+        <div class="col s12 m6">
+          <img src="{% static 'img/tech.jpg' %}" alt="" class="circle responsive-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Tech Tips -->
+  <section class="section section-podcast white-text">
+    <div class="primary-overlay valign-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8">
+            <h4>Tech Tips of the Day</p>
+          </div>
+          <div class="col s12 m4">
+            <a href="#" class="btn purple btn-large">
+              <i class="fa fa-podcast"></i> Listen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: LAtest Blog -->
+<section id="popular" class="section section-popular scrollspy">
+  <div class="container">
+    <h5>
+      News & Blogs</h5>
+    <div class="row">
+      {% if blogs %}
+        {% for blog in blogs %}
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                  <img src="{{blog.photo.url }}" alt="">
+              </div>
+              <div class="card-content">
+                <p>
+                  {{blog.title}}
+                </p>
+
+                <p class="light">{{blog.list_date}}</p>
+                <a href="{% url 'blog' blog.id %}">Read more...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      {% else %}
+        <div class="col s12">
+          <p>No Blogs Available</p>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h4>Account Login</h4>
+      <p>Login to access your account dashboard</p>
+      <form>
+        <div class="input-field">
+          <input type="email" id="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password">
+          <label for="password">Password</label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close btn grey">
+        <i class="fa fa-sync"></i> Reset Password</a>
+      <a href="#!" class="modal-action modal-close btn purple">
+        <i class="fa fa-lock"></i> Login</a>
+    </div>
+  </div>
+
 {% endblock %}
