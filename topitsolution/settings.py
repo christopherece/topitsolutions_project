@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['192.168.1.182','localhost','topitsolutions.local']
 
 INSTALLED_APPS = [
     'services.apps.ServicesConfig',
+    'contacts.apps.ContactsConfig',
     'blogs.apps.BlogsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
@@ -140,3 +141,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ## Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

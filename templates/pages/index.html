@@ -23,7 +23,7 @@
             <i class="large material-icons">phone</i>
               <span id="phone">022-493-6601</span> 
           </a>
-          <a href="#" class="btn btn-large purple white-text">
+          <a href="{% url 'contact' %}" class="btn btn-large purple white-text">
             <i class="large material-icons">event</i>
               <span id="phone">Book Online</span> 
           </a>
@@ -133,28 +133,35 @@
   </div>
 </section>
 
-  <!-- Login Modal -->
-  <div id="login-modal" class="modal">
+  <!--  Modal -->
+  <div id="contact-modal" class="modal">
     <div class="modal-content">
-      <h4>Account Login</h4>
-      <p>Login to access your account dashboard</p>
-      <form>
-        <div class="input-field">
-          <input type="email" id="email">
-          <label for="email">Email</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="password">
-          <label for="password">Password</label>
-        </div>
+      <form action="{% url 'contactus' %}" method="POST">
+        {% csrf_token %}
+          <h5>Please fill out this form</h5>
+          <div class="input-field">
+            <input type="text" placeholder="Name" id="name" name="name">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field">
+            <input type="email" placeholder="Email" id="email" name="email">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Phone" id="phone" name="phone">
+            <label for="phone">Phone</label>
+          </div>
+          <div class="input-field">
+            <textarea class="materialize-textarea" placeholder="Enter Message" id="message" name="message"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <input type="submit" value="Submit" class="btn" style="background: #d847f1;">
       </form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close btn grey">
-        <i class="fa fa-sync"></i> Reset Password</a>
-      <a href="#!" class="modal-action modal-close btn purple">
-        <i class="fa fa-lock"></i> Login</a>
+      
     </div>
   </div>
+
+
+  
 
 {% endblock %}

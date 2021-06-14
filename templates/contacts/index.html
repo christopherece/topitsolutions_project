@@ -12,17 +12,19 @@
     <div class="showcase container">
         <div class="row">
           <div class="col s12 m10 offset-m1 center">
-            <h5>Welcome To TopITSolution</h5>
             <h1>Contact</h1>
           </div>
         </div>
       </div>
   </header>
 
+  
   <!-- Section: Contact -->
   <section id="contact" class="section section-contact scrollspy">
     <div class="container">
       <div class="row">
+        
+
         <div class="col s12 m6">
           <div class="card-panel white-text center" style="background: #d847f1;">
             <i class="material-icons medium">email</i>
@@ -40,25 +42,36 @@
           </ul>
         </div>
         <div class="col s12 m6">
+
+            {% if messages %}
+              {% for message in messages %}
+                <div class="card-panel green darken-1">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
           <div class="card-panel grey lighten-3">
-            <h5>Please fill out this form</h5>
-            <div class="input-field">
-              <input type="text" placeholder="Name" id="name">
-              <label for="name">Name</label>
-            </div>
-            <div class="input-field">
-              <input type="email" placeholder="Email" id="email">
-              <label for="email">Email</label>
-            </div>
-            <div class="input-field">
-              <input type="text" placeholder="Phone" id="phone">
-              <label for="phone">Phone</label>
-            </div>
-            <div class="input-field">
-              <textarea class="materialize-textarea" placeholder="Enter Message" id="message"></textarea>
-              <label for="message">Message</label>
-            </div>
-            <input type="submit" value="Submit" class="btn" style="background: #d847f1;">
+            <form action="{% url 'contactus' %}" method="POST">
+              {% csrf_token %}
+                <h5>Please fill out this form</h5>
+                <div class="input-field">
+                  <input type="text" placeholder="Name" id="name" name="name">
+                  <label for="name">Name</label>
+                </div>
+                <div class="input-field">
+                  <input type="email" placeholder="Email" id="email" name="email">
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Phone" id="phone" name="phone">
+                  <label for="phone">Phone</label>
+                </div>
+                <div class="input-field">
+                  <textarea class="materialize-textarea" placeholder="Enter Message" id="message" name="message"></textarea>
+                  <label for="message">Message</label>
+                </div>
+                <input type="submit" value="Submit" class="btn" style="background: #d847f1;">
+            </form>
           </div>
         </div>
       </div>
