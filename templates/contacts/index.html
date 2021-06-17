@@ -26,19 +26,21 @@
         
 
         <div class="col s12 m6">
-          <div class="card-panel white-text center" style="background: #d847f1;">
+          <div class="card-panel white-text center" style="background: #351c75;">
             <i class="material-icons medium">email</i>
-            <h5>Contact Us For Booking</h5>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sed praesentium delectus. Sit, mollitia
-              quo. Veniam repellat voluptas ipsum doloremque?</p>
+            <h5>Get in touch</h5>
+            <p>
+                TopITSolutions offer one-hour free consultations. <br>
+                Contact us to see what we can do for you.
+            </p>
           </div>
           <ul class="collection with-header">
             <li class="collection-header">
               <h4>Location</h4>
             </li>
-            <li class="collection-item">Travelville Agency</li>
-            <li class="collection-item">555 Beach rd, Suite 33</li>
-            <li class="collection-item">Miami FL, 55555</li>
+            <li class="collection-item">TopITSolutions</li>
+            <li class="collection-item">Northcote</li>
+            <li class="collection-item">Auckland. 0627</li>
           </ul>
         </div>
         <div class="col s12 m6">
@@ -51,15 +53,15 @@
               {% endfor %}
             {% endif %}
           <div class="card-panel grey lighten-3">
-            <form action="{% url 'contactus' %}" method="POST">
+            <form id="sendEmailForm" action="{% url 'contactus' %}" method="POST">
               {% csrf_token %}
                 <h5>Please fill out this form</h5>
                 <div class="input-field">
-                  <input type="text" placeholder="Name" id="name" name="name">
+                  <input type="text" placeholder="Name" id="name" name="name" required>
                   <label for="name">Name</label>
                 </div>
                 <div class="input-field">
-                  <input type="email" placeholder="Email" id="email" name="email">
+                  <input type="email" placeholder="Email" id="email" name="email" required>
                   <label for="email">Email</label>
                 </div>
                 <div class="input-field">
@@ -67,10 +69,10 @@
                   <label for="phone">Phone</label>
                 </div>
                 <div class="input-field">
-                  <textarea class="materialize-textarea" placeholder="Enter Message" id="message" name="message"></textarea>
+                  <textarea class="materialize-textarea" placeholder="Enter Message" id="message" name="message" required></textarea>
                   <label for="message">Message</label>
                 </div>
-                <input type="submit" value="Submit" class="btn" style="background: #d847f1;">
+                <input type="submit" id="sendBtn" value="Submit" class="btn" style="background: #351c75;">
             </form>
           </div>
         </div>

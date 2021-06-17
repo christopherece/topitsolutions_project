@@ -1,84 +1,90 @@
-<nav class="transparent">
-    <div class="container">
-      <div class="nav-wrapper">
-        <a href="{% url 'index' %}" class="brand-logo">TopITSolution</a>
-        <a href="#" data-activates="mobile-nav" class="button-collapse">
-          <i class="fa fa-bars"></i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-                {% if '/' == request.path %}
-                    <a class="active-link" href="{% url 'index' %}">Home</a>
-                {% else %}
-                    <a class="" href="{% url 'index' %}">Home</a>
-                {% endif %}
-          </li>
-
-          <li>
-            {% if 'services' in request.path %}
-                <a class="active-link" href="{% url 'services' %}">Services</a>
-            {% else %}
-            <a class="" href="{% url 'services' %}">Services</a>
-            {% endif %}
-          </li>
-
-          <li>
-            {% if 'blog' in request.path %}
-                <a class="active-link" href="{% url 'blogs' %}">News & Blog</a>
-            {% else %}
-                <a class="" href="{% url 'blogs' %}">News & Blog</a>
-            {% endif %}
-          </li>
-
-          <li>
-            {% if 'contact' in request.path %}
-                <a class="active-link" href="{% url 'contact' %}">Contact</a>
-            {% else %}
-            <a class="" href="{% url 'contact' %}">Contact</a>
-            {% endif %}
-          </li>
-
-          <li>
+    <nav class="fixed">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="{% url 'index' %}" class="brand-logo">TopITSolution</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+                  {% if '/' == request.path %}
+                      <a class="active-link" href="{% url 'index' %}">Home</a>
+                  {% else %}
+                      <a class="" href="{% url 'index' %}">Home</a>
+                  {% endif %}
+            </li>
+  
+            <li>
               {% if 'about' in request.path %}
                   <a class="active-link" href="{% url 'about' %}">About </a>
               {% else %}
                 <a class="" href="{% url 'about' %}">About</a>
               {% endif %}
-          </li>
-
-          
-        </ul>
-
-        <ul class="side-nav" id="mobile-nav">
-          <h4 class="purple-text text-darken-4 center">TopITSolution</h4>
-          <li>
-            <div class="divider"></div>
-          </li>
-          <li>
-            <a href="{% url 'index' %}">
-              <i class="fa fa-home grey-text text-darken-4"></i> Home</a>
-          </li>
-          <li>
-            <a href="{% url 'services' %}">
-              <i class="fa fa-cog grey-text text-darken-4"></i> Services</a>
-          </li>
-          <li>
-            <a href="{% url 'blogs' %}">
-              <i class="fa fa-users grey-text text-darken-4"></i> News & Blog</a>
-          </li>
-
-          <li>
-            <a href="{% url 'contact' %}">
-              <i class="fa fa-users grey-text text-darken-4"></i> Contact</a>
-          </li>
-
-          <li>
-            <a href="{% url 'about' %}">
-              <i class="fa fa-users grey-text text-darken-4"></i> About</a>
-          </li>
-      
-          
-        </ul>
+            </li>
+  
+            <li>
+              {% if 'services' in request.path %}
+                  <a class="active-link" href="{% url 'services' %}">Services</a>
+              {% else %}
+              <a class="" href="{% url 'services' %}">Services</a>
+              {% endif %}
+            </li>
+  
+            <li>
+              {% if 'blog' in request.path %}
+                  <a class="active-link" href="{% url 'blogs' %}">News & Blog</a>
+              {% else %}
+                  <a class="" href="{% url 'blogs' %}">News & Blog</a>
+              {% endif %}
+            </li>
+  
+            <li>
+              {% if 'contact' in request.path %}
+                  <a class="active-link" href="{% url 'contact' %}">Contact</a>
+              {% else %}
+              <a class="" href="{% url 'contact' %}">Contact</a>
+              {% endif %}
+            </li>
+  
+            
+  
+            
+          </ul>
+  
+          <ul class="side-nav" id="mobile-nav">
+            <h4 class="purple-text text-darken-4 center">TopITSolution</h4>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="{% url 'index' %}">
+                <i class="fa fa-home grey-text text-darken-4"></i> Home</a>
+            </li>
+  
+            <li>
+              <a href="{% url 'about' %}">
+                <i class="fa fa-users grey-text text-darken-4"></i> About</a>
+            </li>
+  
+            <li>
+              <a href="{% url 'services' %}">
+                <i class="fa fa-cog grey-text text-darken-4"></i> Services</a>
+            </li>
+            <li>
+              <a href="{% url 'blogs' %}">
+                <i class="fa fa-users grey-text text-darken-4"></i> News & Blog</a>
+            </li>
+  
+            <li>
+              <a href="{% url 'contact' %}">
+                <i class="fa fa-users grey-text text-darken-4"></i> Contact</a>
+            </li>
+  
+            
+        
+            
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+

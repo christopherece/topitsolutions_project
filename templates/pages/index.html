@@ -19,44 +19,39 @@
           <p></p>
           <br>
           <br>
-          <a href="#" class="btn btn-large white purple-text">
-            <i class="large material-icons">phone</i>
-              <span id="phone">022-493-6601</span> 
-          </a>
-          <a href="{% url 'contact' %}" class="btn btn-large purple white-text">
+         
+          <a href="{% url 'contact' %}" class="btn btn-medium" style="background-color: #351c75;">
             <i class="large material-icons">event</i>
               <span id="phone">Book Online</span> 
           </a>
         </div>
       </div>
     </div>
-  </header>
+</header>
 
   <section class="section-boxes center">
     <div class="row">
       <div class="col s12 m6 l3 blue white-text box">
         <i class="material-icons medium">computer</i>
-        <h5>PC and Mac Support</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
-          eaque et?</p>
+        <h5>Computer Support</h5>
+        <p>
+          PC and Mac Support for any Hardware, Software, Wired and Wireless Issues.
+        </p>
       </div>
       <div class="col s12 m6 l3 purple white-text box">
         <i class="material-icons medium">web</i>
         <h5>Web Design</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
-          eaque et?</p>
+        <p>We can help you build responsive website that suites your specification</p>
       </div>
       <div class="col s12 m6 l3 teal white-text box">
         <i class="material-icons medium">backup</i>
         <h5>Internet of Things</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
-          eaque et?</p>
+        <p>Set up smart homes, build digital signage, media servers, NAS and more</p>
       </div>
       <div class="col s12 m6 l3 amber darken-4 white-text box">
         <i class="material-icons medium">people</i>
         <h5>Remote Support</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt qui ipsa suscipit amet culpa nisi fugiat in aut
-          eaque et?</p>
+        <p>Emergency situation when you need a support? Call us and we can assist you</p>
       </div>
     </div>
   </section>
@@ -66,33 +61,72 @@
     <div class="container">
       <div class="row">
         <div class="col s12 m6">
-          <h3>
-            <span class="deep-purple-text text-darken-1">About</span> Us</h3>
-          <p class="aboutus">
+          <p class="flow-text">
             TopITSolutions are onthe go IT Support. We travel to your home or office to fix computer issues.
             We have the skills and experience to solve any IT related issues including computers, laptops, networks, wifi etc..
             
           </p>
         </div>
-        <div class="col s12 m6">
-          <img src="{% static 'img/tech.jpg' %}" alt="" class="circle responsive-img">
+        <div class="col s12 m5 offset-m1">
+          <br>
+          <ul class="collection with-header z-depth-4">
+            <li class="collection-header">
+              <h5>Services Offered</h5>
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Computer Hardware and Software Issues
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Web Design
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Computer Back Up and Upgrades
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Wifi / Access Point Installation
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Internet of Things
+            </li>
+            <li class="collection-item">
+              <i class="material-icons left">check</i> Remote Support
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section: Tech Tips -->
-  <section class="section section-podcast white-text">
-    <div class="primary-overlay valign-wrapper">
-      <div class="container">
+
+  
+
+  <!-- Section: Languages -->
+  <section class="section section-language" style="background-color: #351c75;">
+    <div class="container">
+      <div class="row">
+        <h4 class="center" style="color: #ffab00;">
+          We Specilaized in fixing:
+        </h4>
+        <br>
+        <br>
         <div class="row">
-          <div class="col s12 m8">
-            <h4>Tech Tips of the Day</p>
+          <div class="col s2">
+            <img src="{% static 'img/apple.png' %}" class="responsive-img" alt="">
           </div>
-          <div class="col s12 m4">
-            <a href="#" class="btn purple btn-large">
-              <i class="fa fa-podcast"></i> Listen
-            </a>
+          <div class="col s2">
+            <img src="{% static 'img/Win10.png' %}" class="responsive-img" alt="">
+          </div>
+          <div class="col s2">
+            <img src="{% static 'img/django.png' %}" class="responsive-img" alt="">
+          </div>
+          <div class="col s2">
+            <img src="{% static 'img/laravel.png' %}" class="responsive-img" alt="">
+          </div>
+          <div class="col s2">
+            <img src="{% static 'img/raspi.png' %}" class="responsive-img" alt="">
+          </div>
+          <div class="col s2">
+            <img src="{% static 'img/php-logo.png' %}" class="responsive-img" alt="">
           </div>
         </div>
       </div>
@@ -100,6 +134,7 @@
   </section>
 
   <!-- Section: LAtest Blog -->
+
 <section id="popular" class="section section-popular scrollspy">
   <div class="container">
     <h5>
