@@ -153,3 +153,7 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+TINYMCE_DEFAULT_CONFIG = {
+    "plugins": "image", #plugins  
+}
