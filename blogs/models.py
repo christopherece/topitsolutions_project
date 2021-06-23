@@ -8,7 +8,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d')
     body = HTMLField()
-    comment = HTMLField(max_length=200, blank=True)
+    comment = models.CharField(max_length=200, blank=True)
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):
