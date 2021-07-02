@@ -9,4 +9,14 @@
 
 {% block extrastyle %}
     <link rel="stylesheet" href="{% static 'css/admin' %}">
+    <script type="text/javascript">
+        tinymce.init({
+          selector: 'link',
+          plugins: 'link',
+          menubar:'insert',
+          toolbar: 'link',
+          default_link_target: "_blank"
+    
+        });
+      </script>
 {% endblock %}
