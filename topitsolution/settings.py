@@ -155,5 +155,5 @@ except ImportError:
     pass
 
 TINYMCE_DEFAULT_CONFIG = {
-    "plugins": "link", #plugins  
+    "plugins": "image", #plugins  
 }
