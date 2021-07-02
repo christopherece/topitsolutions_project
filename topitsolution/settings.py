@@ -157,3 +157,4 @@ except ImportError:
 TINYMCE_DEFAULT_CONFIG = {
     "plugins": "image", #plugins  
 }
+
