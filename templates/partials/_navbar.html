@@ -16,10 +16,10 @@
               </li>
     
               <li>
-                {% if 'about' in request.path %}
-                    <a class="active-link" href="{% url 'about' %}">About </a>
+                {% if 'myreviews' in request.path %}
+                    <a class="active-link" href="{% url 'myreviews' %}">My Reviews </a>
                 {% else %}
-                  <a class="" href="{% url 'about' %}">About</a>
+                  <a class="" href="{% url 'myreviews' %}">My Reviews</a>
                 {% endif %}
               </li>
     
@@ -69,8 +69,8 @@
       </li>
 
       <li>
-        <a href="{% url 'about' %}">
-          <i class="fa fa-users grey-text text-darken-4"></i> About</a>
+        <a href="{% url 'myreviews' %}">
+          <i class="fa fa-users grey-text text-darken-4"></i>My REviews</a>
       </li>
 
       <li>

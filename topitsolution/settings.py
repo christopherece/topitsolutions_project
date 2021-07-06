@@ -126,6 +126,16 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'topitsolution/static')
 ]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tbl_topit',
+        'USER': 'postgres',
+        'PASSWORD' : '!pass1234',
+        'HOST': 'localhost'
+    }
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
