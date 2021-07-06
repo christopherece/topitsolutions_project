@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['192.168.1.182','localhost','topitsolutions.local','10.0.77.219
 INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'contacts.apps.ContactsConfig',
+    'reviews.apps.ReviewsConfig',
     'blogs.apps.BlogsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
@@ -44,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-    'reviews'
 ]
 
 MIDDLEWARE = [
