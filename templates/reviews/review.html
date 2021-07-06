@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %} | {{blog.title}} {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h1>Blog</h1>
+          </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Section: Popular -->
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <h4>
+        Latest News & Blogs</h4>
+      <div class="row">
+        {% if blog %}
+          <div class="col s12 m8">
+            <div class="card">
+              <div class="card-image">
+                  <img src="{{blog.photo.url}}" alt="">
+              </div>
+              <div class="card-content">
+                <h4>{{blog.title}}</h4>
+                <p>
+                  {{blog.body | safe}}
+                </p>
+              </div>
+            </div>
+            </a>
+          </div>
+        {% else %}
+          <div class="col s12">
+            <p>No Blogs Available</p>
+          </div>
+        {% endif %}
+        
+
+        <div class="col s12 m4">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
