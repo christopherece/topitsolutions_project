@@ -82,15 +82,7 @@ WSGI_APPLICATION = 'topitsolution.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tbl_topit',
-        'USER': 'postgres',
-        'PASSWORD': '011258',
-        'HOST': 'localhost'
-    }
-}
+
 
 
 # Password validation
