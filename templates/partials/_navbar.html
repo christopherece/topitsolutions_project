@@ -9,7 +9,7 @@
             <ul class="right hide-on-med-and-down">
               <li>
                     {% if '/' == request.path %}
-                        <a class="active-link" href="{% url 'index' %}">H ome</a>
+                        <a class="active-link" href="{% url 'index' %}">Home</a>
                     {% else %}
                         <a class="" href="{% url 'index' %}"> Home</a>
                     {% endif %}
@@ -27,7 +27,7 @@
                 {% if 'myreviews' in request.path %}
                     <a class="active-link" href="{% url 'myreviews' %}"> My Reviews </a>
                 {% else %}
-                  <a class="" href="{% url 'myreviews' %}">My Reviews</a>
+                  <a class="" href="{% url 'myreviews' %}"> My Reviews</a>
                 {% endif %}
               </li>
     
