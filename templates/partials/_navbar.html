@@ -9,23 +9,23 @@
             <ul class="right hide-on-med-and-down">
               <li>
                     {% if '/' == request.path %}
-                        <a class="active-link" href="{% url 'index' %}">Home</a>
+                        <a class="active-link" href="{% url 'index' %}">H ome</a>
                     {% else %}
-                        <a class="" href="{% url 'index' %}">Home</a>
+                        <a class="" href="{% url 'index' %}"> Home</a>
                     {% endif %}
               </li>
 
               <li>
                 {% if 'blog' in request.path %}
-                    <a class="active-link" href="{% url 'blogs' %}">News & Blog</a>
+                    <a class="active-link" href="{% url 'blogs' %}"> News & Blog</a>
                 {% else %}
-                    <a class="" href="{% url 'blogs' %}">News & Blog</a>
+                    <a class="" href="{% url 'blogs' %}"> News & Blog</a>
                 {% endif %}
               </li>
     
               <li>
                 {% if 'myreviews' in request.path %}
-                    <a class="active-link" href="{% url 'myreviews' %}">My Reviews </a>
+                    <a class="active-link" href="{% url 'myreviews' %}"> My Reviews </a>
                 {% else %}
                   <a class="" href="{% url 'myreviews' %}">My Reviews</a>
                 {% endif %}
@@ -33,9 +33,9 @@
     
               <li>
                 {% if 'services' in request.path %}
-                    <a class="active-link" href="{% url 'services' %}">Explore</a>
+                    <a class="active-link" href="{% url 'services' %}"> Services</a>
                 {% else %}
-                <a class="" href="{% url 'services' %}">Explore</a>
+                <a class="" href="{% url 'services' %}"> Services</a>
                 {% endif %}
               </li>
     
@@ -77,12 +77,12 @@
 
       <li>
         <a href="{% url 'myreviews' %}">
-          <i class="fa fa-users grey-text text-darken-4"></i>My REviews</a>
+          <i class="fa fa-users grey-text text-darken-4"></i> My REeiews</a>
       </li>
 
       <li>
         <a href="{% url 'services' %}">
-          <i class="fa fa-cog grey-text text-darken-4"></i> Explore</a>
+          <i class="fa fa-cog grey-text text-darken-4"></i> Services</a>
       </li>
       
 
