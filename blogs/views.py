@@ -4,7 +4,7 @@ from .models import Blog
 
 # Create your views here.
 def index(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all().order_by('-list_date')
     context = {
         'blogs' : blogs
     }
