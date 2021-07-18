@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} | Services {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h1>Services</h1>
+            <h5>Networking</h5>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div class="container">
+    <section class="row">
+          <div class="col m9 l10 s12">
+            <div class="section scrollspy" id="networking">
+              <h5>Computer Upgrades, Software and Data Migration
+              </h5>
+              <p class="light">
+                Do you have an old work PC that is running slow? or you have an old PC with Windows 7, 8 Operating system?<br>
+                Chances are your old pC or laptop has all the files, program, license attached to it and dont want loose.
+                This is frustrating especially when you have purchased a license and forget where are they?<br>
+                We can help you with that.... <br><br>
+                Slow Computer is frustrating especially when you are doing a project or office work.
+                Chances are your Hard Disk needs replacement or your system needs an upgrade. Here in TopITSolutions we can upgrade your HDD to SSD without loosing any data. <br><br>
+                1. First we are going to clone your old HHD so all files should be intact<br>
+                2. Secondly, we will restore your old drive to the new SSD <br>
+                3. If possible we will upgrade your old OS (e.g Windows 7 or Windows 8) to Windows 10 <br>
+                4. Test and make sure PC or laptop is working just like it was before <br>
+                
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col hide-on-small-only s12 m4 l2">
+            <ul class="pinned section table-of-contents">
+              <li>
+                <a href="#networking">Networking</a>
+              </li>
+    
+              <li>
+                <a href="{% url 'services' %}">Back to Services</a>
+              </li>
+            </ul>
+          </div>
+    </section>
+  </div>
+
+  {% endblock %}
