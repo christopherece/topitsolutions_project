@@ -23,23 +23,29 @@
     <div class="container">
       <div class="row">
         <h4 class="center">
-          Web Development
+          Web Applications
         </h4><br>
+        {% if webprjs %}
+          {% for webprj in webprjs %}
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                  <img src="#" alt="">
+                  <img src="{{webprj.photo.url}}" alt="">
               </div>
               <div class="card-content">
                 <h5>
-                  Test
+                  {{ webprj.title}}
                 </h5>
     
-                <p class="light">Test</p><br>
+                <p class="light">{{webprj.list_date}}</p><br>
                 <a href="#">Read more...</a>
               </div>
             </div>
           </div>
+          {% endfor %}
+        {% else %}å
+          <div class="col">No Web Apps Available</div>
+        {% endif %}
       </div>
     </div>
   </section>
