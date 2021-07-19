@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import Webapp
+
 # Create your views here.
 def index(request):
     return render(request,'services/services.html')
@@ -17,4 +19,8 @@ def networking(request):
     return render(request,'services/networking.html')
 
 def webdevelopment(request):
-    return render(request,'services/webdevelopment.html')
+    webapps = Webapp.objects.all().order_by('-list_date')
+    context = {
+        'webapps': webapps
+    }
+    return render(request,'services/webdevelopment.html', context)

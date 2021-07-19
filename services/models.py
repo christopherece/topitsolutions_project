@@ -5,7 +5,7 @@ from datetime import datetime
 from tinymce.models import HTMLField
 # Create your models here.
 
-class webapp(models.Model):
+class Webapp(models.Model):
     title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d')
     body = HTMLField()

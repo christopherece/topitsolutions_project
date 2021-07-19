@@ -19,31 +19,35 @@
       </div>
   </header>
 
-  <div class="container">
-    <section class="row">
-          <div class="col m9 l10 s12">
-            <div class="section scrollspy" id="webdevelopment">
-              <h5>Web Development
-              </h5>
-              <p class="light">
-                Coming Soon!
-
-              </p>
+  <section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          Web Development
+        </h4><br>
+        {% if webapps %}
+          {% for webapp in webapps %}
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                  <img src="{{webapp.photo.url}}" alt="">
+              </div>
+              <div class="card-content">
+                <h5>
+                  {{ webapp.title}}
+                </h5>
+    
+                <p class="light">{{webapp.list_date}}</p><br>
+                <a href="{% url 'webapp' webapp.id %}">Read more...</a>
+              </div>
             </div>
           </div>
-
-          <div class="col hide-on-small-only s12 m4 l2">
-            <ul class="pinned section table-of-contents">
-              <li>
-                <a href="#webdevelopment">Web Development</a>
-              </li>
-    
-              <li>
-                <a href="{% url 'services' %}">Back to Services</a>
-              </li>
-            </ul>
-          </div>
-    </section>
-  </div>
+          {% endfor %}
+        {% else %}å
+          <div class="col">No Blogs Available</div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
 
   {% endblock %}
