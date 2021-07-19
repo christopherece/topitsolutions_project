@@ -9,7 +9,6 @@ urlpatterns = [
     path('iot', views.iot, name='iot'),
     path('networking', views.networking, name='networking'),
     path('webdevelopment', views.webdevelopment, name='webdevelopment'),
-    
 
 
 ]
