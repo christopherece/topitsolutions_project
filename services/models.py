@@ -16,3 +16,15 @@ class Webapp(models.Model):
         return self.title
 
 
+class Webprj(models.Model):
+    title = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+    body = HTMLField()
+    comment = models.CharField(max_length=200, blank=True)
+    is_published = models.BooleanField(default=True)
+    list_date = models.DateTimeField(default=datetime.now, blank=True)
+    def __str__(self):
+        return self.title
+
+
+

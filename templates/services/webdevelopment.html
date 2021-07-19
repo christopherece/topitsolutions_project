@@ -25,19 +25,19 @@
         <h4 class="center">
           Web Development
         </h4><br>
-        {% if webapps %}
-          {% for webapp in webapps %}
+        {% if webprjs %}
+          {% for webprj in webprjs %}
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                  <img src="{{webapp.photo.url}}" alt="">
+                  <img src="{{webprj.photo.url}}" alt="">
               </div>
               <div class="card-content">
                 <h5>
-                  {{ webapp.title}}
+                  {{ webprj.title}}
                 </h5>
     
-                <p class="light">{{webapp.list_date}}</p><br>
+                <p class="light">{{webprj.list_date}}</p><br>
                 <a href="#">Read more...</a>
               </div>
             </div>

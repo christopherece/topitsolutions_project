@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Webapp
+from .models import Webprj
 
 # Create your views here.
 def index(request):
@@ -19,8 +19,8 @@ def networking(request):
     return render(request,'services/networking.html')
 
 def webdevelopment(request):
-    webapps = Webapp.objects.all().order_by('-list_date')
+    webprjs = Webprj.objects.all().order_by('-list_date')
     context = {
-        'webapps': webapps
+        'webprjs': webprjs
     }
     return render(request,'services/webdevelopment.html', context)
