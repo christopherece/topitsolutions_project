@@ -19,6 +19,35 @@
       </div>
   </header>
 
-
+  <section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          Web Development
+        </h4><br>
+        {% if webapps %}
+          {% for webapp in webapps %}
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                  <img src="{{webapp.photo.url}}" alt="">
+              </div>
+              <div class="card-content">
+                <h5>
+                  {{ webapp.title}}
+                </h5>
+    
+                <p class="light">{{webapp.list_date}}</p><br>
+                <a href="#">Read more...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}å
+          <div class="col">No Blogs Available</div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
 
   {% endblock %}
