@@ -28,6 +28,7 @@
         </h4><br>
         {% if blogs %}
           {% for blog in blogs %}
+          <a href="{% url 'blog' blog.id %}">
           <div class="col s12 m4">
             <div class="card small">
               <div class="card-image">
@@ -39,10 +40,10 @@
                 </h6>
     
                 <p class="light">{{blog.list_date}}</p><br>
-                <a href="{% url 'blog' blog.id %}">Read more...</a>
               </div>
             </div>
           </div>
+        </a>
           {% endfor %}
         {% else %}å
           <div class="col">No Web Apps Available</div>
