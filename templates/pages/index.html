@@ -38,17 +38,17 @@
           PC and Mac Support for any Hardware, Software and Network Issues.
         </p>
       </div>
-      <div class="col s12 m6 l3 purple white-text box h-100">
+      <div class="col s12 m6 l3 purple white-text box">
         <i class="material-icons medium">web</i>
         <h5>Web Development</h5>
         <p>Build responsive and user friendly website and web application.</p>
       </div>
-      <div class="col s12 m6 l3 teal white-text box h-100">
+      <div class="col s12 m6 l3 teal white-text box">
         <i class="material-icons medium">backup</i>
         <h5>Internet of Things</h5>
         <p>Set up smart homes, media servers, digital signage, NAS and more</p>
       </div>
-      <div class="col s12 m6 l3 amber darken-4 white-text box h-100">
+      <div class="col s12 m6 l3 amber darken-4 white-text box">
         <i class="material-icons medium">people</i>
         <h5>Remote Support</h5>
         <p>Emergency situation when you need an IT support? Give us a call </p>
@@ -147,36 +147,37 @@
   <!-- Section: LAtest Blog -->
 
 <section id="popular" class="section section-popular scrollspy">
-    <div class="container">
-      <div class="row">
-        <h4 class="center">
-          Latest News & Blogs
-        </h4><br>
-        {% if blogs %}
-          {% for blog in blogs %}
-          <a href="{% url 'blog' blog.id %}">
+  <div class="container">
+    <h5>
+      News & Blogs</h5>
+    <div class="row">
+      {% if blogs %}
+        {% for blog in blogs %}
           <div class="col s12 m4">
-            <div class="card small">
+            <div class="card">
               <div class="card-image">
-                  <img src="{{blog.photo.url}}" alt="" >
+                  <img src="{{blog.photo.url }}" alt="" style="min-height: 220px; max-height: 220px;">
               </div>
               <div class="card-content">
                 <h6>
-                  {{ blog.title}}
+                  {{blog.title}}
                 </h6>
-    
-                <p class="light">{{blog.list_date}}</p><br>
+
+                <p class="light">{{blog.list_date}}</p>
+                <a href="{% url 'blog' blog.id %}">Read more...</a>
               </div>
             </div>
           </div>
-        </a>
           {% endfor %}
-        {% else %}å
-          <div class="col">No Web Apps Available</div>
-        {% endif %}
-      </div>
+      {% else %}
+        <div class="col s12">
+          <p>No Blogs Available</p>
+        </div>
+      {% endif %}
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!--  Modal -->
   <div id="contact-modal" class="modal">
