@@ -21,35 +21,37 @@
 
 <!-- Section: Popular -->
 <section id="popular" class="section section-popular scrollspy">
-    <div class="container">
-      <div class="row">
-        <h4 class="center">
-          Latest News & Blogs
-        </h4><br>
-        {% if blogs %}
-          {% for blog in blogs %}
+  <div class="container">
+    <h5>
+      News & Blogs</h5>
+    <div class="row">
+      {% if blogs %}
+        {% for blog in blogs %}
           <div class="col s12 m4">
             <div class="card small">
               <div class="card-image">
-                  <img src="{{blog.photo.url}}" alt="" >
+                  <img src="{{blog.photo.url }}" alt="" style="min-height: 220px; max-height: 220px;">
               </div>
               <div class="card-content">
                 <h6>
-                  {{ blog.title}}
+                  {{blog.title}}
                 </h6>
-    
-                <p class="light">{{blog.list_date}}</p><br>
+
+                <p class="light">{{blog.list_date}}</p>
                 <a href="{% url 'blog' blog.id %}">Read more...</a>
               </div>
             </div>
           </div>
           {% endfor %}
-        {% else %}å
-          <div class="col">No Web Apps Available</div>
-        {% endif %}
-      </div>
+      {% else %}
+        <div class="col s12">
+          <p>No Blogs Available</p>
+        </div>
+      {% endif %}
+
     </div>
-  </section>
+  </div>
+</section>
 
   {% endblock %}
 
