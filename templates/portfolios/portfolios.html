@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} | My Reviews {% endblock %}
+
+
+{% load static %}
+
+{% block content %}
+<!-- Header -->
+<header class="main-header-inner">
+    {% include 'partials/_navbar.html'  %}
+    <div class="showcase container">
+        <div class="row">
+          <div class="col s12 m10 offset-m1 center">
+            <h1>Portfolio</h1>
+          </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Section: Popular -->
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          Portfolio
+        </h4><br>
+        {% if portfolios %}
+          {% for portfolio in portfolios %}
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                  <img src="{{portfolio.photo.url}}" alt="">
+              </div>
+              <div class="card-content">
+                <h5>
+                  {{ portfolio.title}}
+                </h5>
+    
+                <p class="light">{{review.list_date}}</p><br>
+                <a href="{% url 'portfolio' portfolio.id %}">Read more...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="col">No Portfolio Available</div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+
+

@@ -25,9 +25,9 @@
     
               <li>
                 {% if 'myreviews' in request.path %}
-                    <a class="active-link" href="{% url 'myreviews' %}"> My Reviews </a>
+                    <a class="active-link" href="{% url 'portfolios' %}"> Portfolio </a>
                 {% else %}
-                  <a class="" href="{% url 'myreviews' %}"> My Reviews</a>
+                  <a class="" href="{% url 'portfolios' %}"> Portfolio</a>
                 {% endif %}
               </li>
     
@@ -76,8 +76,8 @@
       </li>
 
       <li>
-        <a href="{% url 'myreviews' %}">
-          <i class="fa fa-users grey-text text-darken-4"></i> My Reviews</a>
+        <a href="{% url 'portfolios' %}">
+          <i class="fa fa-users grey-text text-darken-4"></i> Portfolio</a>
       </li>
 
       <li>
