@@ -47,11 +47,12 @@
 
             {% if messages %}
               {% for message in messages %}
-                <div class="card-panel green darken-1">
+                <div class="card-panel green darken-1" id="messages">
                   {{ message }}
                 </div>
               {% endfor %}
             {% endif %}
+
           <div class="card-panel grey lighten-3">
             <form id="sendEmailForm" action="{% url 'contactus' %}" method="POST">
               {% csrf_token %}
