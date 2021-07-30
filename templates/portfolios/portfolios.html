@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} | My Reviews {% endblock %}
+{% block title %} | Portfolio {% endblock %}
 
 
 {% load static %}
@@ -38,8 +38,7 @@
                   {{ portfolio.title}}
                 </h5>
     
-                <p class="light">{{review.list_date}}</p><br>
-                <a href="{% url 'portfolio' portfolio.id %}">Read more...</a>
+                <p class="light">{{portfolio.body}}</p><br>
               </div>
             </div>
           </div>
