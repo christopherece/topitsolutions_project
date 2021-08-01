@@ -29,16 +29,19 @@
         {% if portfolios %}
           {% for portfolio in portfolios %}
           <div class="col s12 m4">
-            <div class="card large">
+            <div class="card">
               <div class="card-image">
-                  <img src="{{portfolio.photo.url}}" alt="" style="min-height: 220px; max-height: 220px;">
+                  <img class="activator" src="{{portfolio.photo.url}}" alt="" style="min-height: 220px; max-height: 220px;">
               </div>
               <div class="card-content">
-                <h5>
-                  {{ portfolio.title}}
-                </h5>
-    
-                <p class="light">{{portfolio.body | safe}}</p><br>
+                <span class="card-title activator grey-text text-darken-4">
+                  <i class="material-icons right">more_vert</i>{{ portfolio.title}}
+                </span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                  <i class="material-icons right">close</i>{{portfolio.body | safe}}
+                </span>
               </div>
             </div>
           </div>
